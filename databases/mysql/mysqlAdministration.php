@@ -1,19 +1,19 @@
 <?php
-    namespace databases\mysql;
+    namespace databases;
 
     class ServerAttributes {
 
-        $localhost = "localhost";
-        $user = "root";
-        $password = "";
-        $database = "";
+        public const LOCALHOST = "localhost";
+        public const USER = "root";
+        public const PASSWORD = "";
+        public const DATABASE = "";
     }
 
     class DatabasesApplications {
 
-      public function StabiliseConnection (ServerAttributes attributes) {
+      public function StabiliseConnection (ServerAttributes $attributes) {
 
-        $connection = mysqli_connect (attributes.$localhost, attributes.$user, attributes.$password, attributes.$database);
+        $connection = mysqli_connect ($attributes::LOCALHOST, $attributes::USER, $attributes::PASSWORD, $attributes::DATABASE);
 
         return $connection;
       }
