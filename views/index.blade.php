@@ -20,7 +20,8 @@
       if ($dbWorkFlow->CloseConnection($dbWorkFlow->StabiliseConnection ($attributes)))
         echo("<p>Connection closed</p>");
 
-      include ("../interogations/interogationsAdministration.php");
+      require_once ("../interogations/interogationsAdministration.php");
+      require_once ("../databases/mysql/setupSystemDatabases.php");
     */
     ?>
     <h1> Welcome </h1>
