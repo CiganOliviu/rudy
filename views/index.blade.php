@@ -19,6 +19,8 @@
 
       if ($dbWorkFlow->CloseConnection($dbWorkFlow->StabiliseConnection ($attributes)))
         echo("<p>Connection closed</p>");
+
+      include ("../interogations/interogationsAdministration.php");
     */
     ?>
     <h1> Welcome </h1>
